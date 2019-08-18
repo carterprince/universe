@@ -1,4 +1,4 @@
-{
+thingsDict = {
     "wip": ["WORK IN PROGRESS", ("wip",1,1)],
     "universe": [("galactic supercluster", 20, 0.8)],
     "water":[("Hydrogen",1,1),("Oxygen",1,1)],

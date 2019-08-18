@@ -1,9 +1,9 @@
 import inspect
 import random
 import nameGen
+from data import things
 
-thingsJSON = open("data/things",'r').read()
-thingsDict = eval(thingsJSON)
+thingsDict = things.thingsDict
 
 #every function in nameGen
 nameGenFunctions = [x[0] for x in inspect.getmembers(nameGen, inspect.isfunction) if x[0] != "literal_eval" and x[0] != "getName"]
