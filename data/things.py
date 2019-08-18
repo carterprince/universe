@@ -65,7 +65,7 @@ thingsDict = {
     "medieval-king": ["medievalKingName", ("medieval-king-head",1,1),("torso",1,1),("leg",2,1),("arm",2,1),("medieval-king-attire",1,0.85)],
     "medieval-king-attire": ["attire", ("robe", 1, 1), ("slipper", 2, 1), ("crown", 1, 1)],
 
-    "modern-wet-planet": ["modern planet", ("modern-continent",7,0.9),("continent",3,0.5),("life-ocean",1,1),("life-sea",12,0.6),("arctic",2,0.5)],
+    "modern-wet-planet": ["wet planet with life", ("modern-continent",7,0.9),("continent",3,0.5),("life-ocean",1,1),("life-sea",12,0.6),("arctic",2,0.5)],
     "modern-continent": ["continent", ("modern-civilization", 1, 1), ("dirt", 1, 1)],
     "modern-civilization": ["civilization", ("modern-nation", 20, 0.4)],
     "modern-nation": ["modernNationName", ("modern-capital", 1, 1), ("modern-city", 5, 0.4), ("modern-town", 20, 0.4), ("modern-farm",8,0.8), ("rural region", 3, 0.8), ("desert region", 2, 0.4)],
