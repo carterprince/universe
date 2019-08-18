@@ -1,14 +1,14 @@
-from ast import literal_eval
 import inspect
 import random
 import nameGen
 
-thingsJSON = open("things.json",'r').read()
-thingsDict = literal_eval(thingsJSON)
+thingsJSON = open("data/things.json",'r').read()
+thingsDict = eval(thingsJSON)
 
 #every function in nameGen
 nameGenFunctions = [x[0] for x in inspect.getmembers(nameGen, inspect.isfunction) if x[0] != "literal_eval" and x[0] != "getName"]
 
+#This class describes an object, its type, its display name, and its children.
 class Thing:
     def __init__(self, thingType):
         self.Contains = []
