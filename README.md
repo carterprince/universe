@@ -24,7 +24,9 @@ Children are formatted like this:
 
 Here's an example thing, a `medieval-house`:
 
-```"medieval-house": ["house", ("desk",1,0.7), ("dinner table",1,1),("medieval-farmer", 7, 0.7), ("walls", 1, 1)]```
+```"medieval-house": ["house", ("desk",1,0.7), ("dinner table",1,1),("medieval-farmer", 7, 0.7)```
+
+In this case, a desk will appear in the house 70% of the time, on average there will be 5 famers in the house, and a dinner table will always appear no matter what.
 
 For its children to be viewable, you would have to define them too. For example, the `dinner table`:
 
