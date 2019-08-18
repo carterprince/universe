@@ -2,7 +2,7 @@ import inspect
 import random
 import nameGen
 
-thingsJSON = open("data/things.json",'r').read()
+thingsJSON = open("data/things",'r').read()
 thingsDict = eval(thingsJSON)
 
 #every function in nameGen
