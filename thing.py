@@ -37,7 +37,7 @@ class Thing:
     def view(self):
         print("\n- "+self.Name)
         for i, child in enumerate(self.Contains):
-            if child.Type == "medieval-thought":
+            if child.Type.endswith("-thought"):
                 print("       - "+child.Name)
             else:
                 print("   + "+str(i+1)+" - "+child.Name)

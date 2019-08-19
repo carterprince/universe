@@ -19,7 +19,7 @@ thingsDict = {
     "medieval-civilization": ["civilization", ("medieval-nation", 20, 0.4)],
     "dirt": [("Silicon", 1, 1), ("decayed biomass", 1, 1), ("feces", 1, 0.4)],
     "lifeless dirt": ["dirt", ("Silicon", 1, 1)],
-    "medieval-nation": ["medievalNationName", ("medieval-capital", 1, 1), ("medieval-city", 5, 0.4), ("medieval-village", 20, 0.4), ("medieval-farm",13,0.8), ("rural region", 3, 0.8), ("desert region", 2, 0.4)],
+    "medieval-nation": ["medievalNationName", ("medieval-capital", 1, 1), ("medieval-city", 5, 0.4), ("medieval-village", 20, 0.4), ("medieval-farm",13,0.8), ("life-rural region", 3, 0.8), ("desert region", 2, 0.4)],
     "lifeless arctic": ["arctic", ("snow", 1, 1), ("lifeless dirt", 1, 1)],
     "arctic": [("snow", 1, 1), ("dirt", 1, 1), ("penguin", 24, 0.01)],
     "snow": [("water", 1, 1), ("urine", 1, 0.01)],
@@ -65,10 +65,19 @@ thingsDict = {
     "medieval-king": ["medievalKingName", ("medieval-king-head",1,1),("torso",1,1),("leg",2,1),("arm",2,1),("medieval-king-attire",1,0.85)],
     "medieval-king-attire": ["attire", ("robe", 1, 1), ("slipper", 2, 1), ("crown", 1, 1)],
 
+    "life-rural region": ["rural region", ("life-forest", 20, 0.3), ("life-plain", 20, 0.6)],
+    "life-forest": ["forest", ("dirt", 1, 1), ("tree", 30, 0.85), ("forest-life", 1, 1)],
+    "forest-life": ["life", ("bird", 10, 0.8), ("deer", 5, 0.6), ("bear", 2, 0.4), ("cat", 4, 0.2), ("squirrel", 30, 0.85), ("grass", 1, 0.7)],
+    "grass": [("blades of grass", 20, 0.8)],
+
+    "life-plain": ["plain", ("plain-life", 1, 1)],
+    "plain-life": ["life", ("ferret", 32, 0.9), ("rabbit", 32, 0.9),  ("grass", 1, 0.9)],
+    "plain": [("lifeless dirt", 1, 1)],
+
     "modern-wet-planet": ["wet planet with life", ("modern-continent",7,0.9),("continent",3,0.5),("life-ocean",1,1),("life-sea",12,0.6),("arctic",2,0.5)],
     "modern-continent": ["continent", ("modern-civilization", 1, 1), ("dirt", 1, 1)],
     "modern-civilization": ["civilization", ("modern-nation", 20, 0.4)],
-    "modern-nation": ["modernNationName", ("modern-capital", 1, 1), ("modern-city", 5, 0.4), ("modern-town", 20, 0.4), ("modern-farm",8,0.8), ("rural region", 3, 0.8), ("desert region", 2, 0.4)],
+    "modern-nation": ["modernNationName", ("modern-capital", 1, 1), ("modern-city", 5, 0.4), ("modern-town", 20, 0.4), ("modern-farm",8,0.8), ("life-rural region", 3, 0.8), ("desert region", 2, 0.4)],
     "modern-town" : ["town", ("park", 2, 0.8), ("modern-building",15,0.7), ("modern-house", 25, 0.4)],
     "modern-capital": ["capital city", ("modern-government-building",2,1), ("park", 1, 1), ("modern-building",22,0.7), ("modern-house", 29, 0.4)],
     "modern-government-building" : ["government building"],
@@ -76,6 +85,9 @@ thingsDict = {
     "modern-building": ["building"],
     "modern-house" : ["house"],
     "modern-farm": ["farm"],
-    "park": [("bench", 10, 0.8), ("pond", 2, 0.6), ("modern-hobo")],
-    "modern-hobo": ["hobo"]
+    "park": [("park-bench", 10, 0.8), ("pond", 2, 0.6), ("modern-hobo", 4, 0.5)],
+    "park-bench": [("modern-hobo", 1, 0.2)],
+    "modern-hobo": ["hobo", ("modern-hobo-head", 1, 1),("torso",1,1),("leg",2,1),("arm",2,1),("modern-hobo-attire",1,0.85)],
+    "modern-hobo-head": ["head", ("modern-hobo-thought",2,1)],
+    "modern-hobo-thought": ["modernHoboThought"]
 }

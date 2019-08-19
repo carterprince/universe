@@ -80,3 +80,8 @@ def modernNationName():
     fileContent = open("data/modern/nationNames",'r').read()
     fileList = fileContent.split("\n")
     return "The Nation of "+choice(fileList)
+
+def modernHoboThought():
+    fileContent = open("data/modern/hoboThoughts",'r').read()
+    fileList = fileContent.split("\n")
+    return choice(fileList)
