@@ -4,10 +4,12 @@ universe = Thing("universe")
 universe.generateChildren()
 
 from colorama import init
+
 init()
 
 from os import system
 from data import things
+
 path = [universe]
 command = ""
 
@@ -20,14 +22,11 @@ while command.lower() != "q":
         try:
             nextIndex = int(command)
             if nextIndex == 0:
-                print("WARNING: No such thing of index "+str(nextIndex)+". ", end="")
+                print("WARNING: No such thing of index " + str(nextIndex) + ". ", end='')
             else:
-                nextNode = universe.Contains[nextIndex-1]
-                if nextNode.Type in things.cannotEnter:
-                    print("WARNING: You cannot enter that. ",end="")
-                    continue
-                elif nextNode.Type.endswith("-thought"):
-                    print("WARNING: You cannot enter that. ",end="")
+                nextNode = universe.Contains[nextIndex - 1]
+                if nextNode.Type in things.cannotEnter or nextNode.Type.endswith("-thought"):
+                    print("WARNING: You cannot enter that. ", end='')
                     continue
                 else:
                     universe = nextNode
@@ -35,28 +34,27 @@ while command.lower() != "q":
                     path.append(universe)
 
         except IndexError:
-            print("WARNING: No such thing of index "+str(nextIndex)+". ",end="")
+            print("WARNING: No such thing of index " + str(nextIndex) + ". ", end='')
     except ValueError:
         if command.lower() == "b":
             try:
                 universe = path[-2]
                 del path[-1]
             except:
-                print("WARNING: Cannot go back, this is the top node. ", end="")
+                print("WARNING: Cannot go back, this is the top node. ", end='')
         if command.lower() == "h" or command.lower() == "help":
             system("cls")
-            print("\nHELP:\n(#) to enter a node.\n(B) to go back to the previous node.\n(Q) to quit.\n(r) to return to top node.\n(R) to reset simulation.", end="")
+            print("\nHELP:\n(#) to enter a node.\n(B) to go back to the previous node.\n(Q) to quit.\n(r) to return to top node.\n(R) to reset simulation.", end='')
             input("\n\nEnter to exit...")
             system("cls")
-        if command == 'R':
+        if command == "R":
             universe = Thing("universe")
             universe.generateChildren()
             path = [universe]
             command = ""
             continue
-        if command == 'r':
+        if command == "r":
             universe = path[0]
             path = path[1:]
-            print(path)
             command = ""
             continue
