@@ -244,7 +244,7 @@ thingsDict = {
     "tree": [("branch", 20, 0.9), ("tree-trunk", 1, 1)],
     "branch": [("leaf", 15, 0.9)],
     "leaf": [("leaf-blade", 1, 1), ("petiole", 1, 1)],
-    "leaf-blade": [("plant cell", 30, 0.9)],
+    "leaf-blade": ["blade", ("plant cell", 30, 0.9)],
     "petiole": [("plant cell", 10, 0.9)],
     "tree-trunk": ["trunk", ("bark", 1, 1)],
     "forest-life": [
@@ -263,7 +263,17 @@ thingsDict = {
         ("membrane", 1, 1),
         ("nucleus", 1, 1),
         ("chloroplast", 5, 0.8),
+        ("cytoplasm", 1, 1),
+        ("ribosome", 35, 0.8),
+        ("vacuole", 1, 1),
+        ("cytoplasm", 1, 1),
+        ("golgi apparatus", 1, 1),
     ],
+    "cytoplasm": [
+        ("water", 1, 1),
+        ("glucose", 10, 0.5)
+    ],
+    "cellulose": [("Carbon", 1, 1),("Hydrogen", 1, 1),("Oxygen", 1, 1)],
     "nucleus": [("chromosome", 23, 1)],
     "chromosome": [("DNA", 1, 1)],
     "DNA": [("dna-contents", 1, 1)],
