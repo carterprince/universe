@@ -3,6 +3,17 @@ from random import randint
 
 #This file generates names/sentences for people and things that are not generally one specific word. (Ex: Contries, People, Thoughts)
 
+#Biology stuff
+
+from colorama import Fore
+
+def DNAContents():
+    dna = ""
+    for i in range(5):
+        for j in range(10):
+            dna += choice(['C', 'G', 'A', 'T'])
+        dna += "\n"
+    return Fore.RED+dna.strip("\n")+Fore.WHITE
 
 #MEDIEVAL STUFF
 def medievalName():
@@ -13,7 +24,7 @@ def medievalName():
 def medievalNationName():
     fileContent = open("data/medieval/nationNames",'r').read()
     fileList = fileContent.split("\n")
-    return choice(fileList)
+    return Fore.LIGHTRED_EX+choice(fileList)+Fore.WHITE
 
 def medievalSerfThought():
     fileContent = open("data/medieval/serfThoughts",'r').read()
@@ -79,9 +90,12 @@ def modernName():
 def modernNationName():
     fileContent = open("data/modern/nationNames",'r').read()
     fileList = fileContent.split("\n")
-    return "The Nation of "+choice(fileList)
+    return Fore.LIGHTRED_EX+"The Nation of "+choice(fileList)+Fore.WHITE
 
 def modernHoboThought():
     fileContent = open("data/modern/hoboThoughts",'r').read()
     fileList = fileContent.split("\n")
     return choice(fileList)
+
+def modernHoboName():
+    return modernName() + " (hobo)"

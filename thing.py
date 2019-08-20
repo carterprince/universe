@@ -1,7 +1,12 @@
 import inspect
-import random
+from random import random
+from os import system
 import nameGen
 from data import things
+
+from colorama import Fore
+
+import time
 
 thingsDict = things.thingsDict
 
@@ -30,14 +35,25 @@ class Thing:
                 for potentialChild in thingsDict[self.Type]: #for every contituient of a thing
                     if type(potentialChild) is tuple: #if the element is not for naming purposes (is an actual thing)
                         for i in range(potentialChild[1]): # run potentialChild[1] times
-                            if random.random() < potentialChild[2]:
+                            if random() < potentialChild[2]:
                                 self.Contains.append(Thing(potentialChild[0])) #add the thing to its parent
             except KeyError:
                 self.Contains.append(Thing("wip"))
     def view(self):
-        print("\n- "+self.Name)
-        for i, child in enumerate(self.Contains):
-            if child.Type.endswith("-thought"):
-                print("       - "+child.Name)
+        system("cls")
+        print("Enter (H) for help.\n- "+self.Name)
+        for i, child in enumerate(self.Contains): #for every child of this node
+            if child.Type in things.cannotEnter: #if the child cannot be entered
+                lines = child.Name.split("\n")
+                if len(lines) > 1: # if the line count is more than 1
+                    for x, line in enumerate(lines):
+                        if x == 0: #if it's the first line
+                            print("       - "+line) #print with dash
+                        else:
+                            print("         "+line) #print without dash
+                else:
+                    print("       - "+child.Name)
+            elif child.Type.endswith("-thought"):
+                print("       - "+Fore.GREEN + child.Name + Fore.WHITE)
             else:
-                print("   + "+str(i+1)+" - "+child.Name)
+                print("   "+Fore.GREEN+"+"+Fore.WHITE+" "+Fore.CYAN+str(i+1)+Fore.WHITE+" - "+child.Name)
