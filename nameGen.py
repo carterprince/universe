@@ -7,7 +7,6 @@ from random import randint
 
 from colorama import Fore
 
-
 def DNAContents():
     dna = ""
     for i in range(5):

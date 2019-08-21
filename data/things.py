@@ -79,9 +79,9 @@ thingsDict = {
     "life-gas-atmosphere": ["atmosphere", ("gas-atmosphere-life", 1, 1), ("Hydrogen", 1, 1), ("Helium", 1, 1)],
     "gas-atmosphere-life": ["life", ("querblop", 5, 0.7), ("nag nag", 4, 0.1)],
     "gas-atmosphere": [("Hydrogen", 1, 1), ("Helium", 1, 1)],
-    "rocky planet": [("moon", 0.7, 1),("Iron", 1, 1), ("Silicon", 1, 1)],
+    "rocky planet": [("moon", 2, 0.4),("Iron", 1, 1), ("Silicon", 1, 1)],
     "lifeless wet planet": [
-        ("moon", 0.8, 1),
+        ("moon", 1, 0.4),
         ("lifeless continent", 10, 0.6),
         ("ocean", 1, 1),
         ("sea", 12, 0.6),
@@ -90,7 +90,7 @@ thingsDict = {
     ],
     "medieval-wet-planet": [
         "wet planet with life",
-        ("moon", 0.8, 1),
+        ("moon", 1, 0.8),
         ("medieval-continent", 7, 0.9),
         ("continent", 3, 0.5),
         ("life-ocean", 1, 1),

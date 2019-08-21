@@ -1,17 +1,30 @@
+from colorama import init
+from colorama import Fore
 from thing import Thing
+from sys import argv
+from os import system
+from random import seed
+from data import things
+
+init()
 
 universe = Thing("universe")
 universe.generateChildren()
 
-from colorama import init
-
-init()
-
-from os import system
-from data import things
-
 path = [universe]
 command = ""
+
+worldSeed = None
+
+if len(argv) > 1:
+    if argv[1] in ["-s", "--seed"]:
+        try:
+            worldSeed = argv[2]
+        except:
+            print("No seed given after "+argv[1]+".")
+            exit()
+
+seed(worldSeed)
 
 while command.lower() != "q":
     universe.view()

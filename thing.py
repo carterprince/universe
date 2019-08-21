@@ -1,7 +1,7 @@
 import inspect
+import nameGen
 from random import random
 from os import system
-import nameGen
 from data import things
 from colorama import Fore
 
