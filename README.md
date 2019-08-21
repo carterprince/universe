@@ -7,10 +7,10 @@ Work in progress, contributions and improvements welcome! :)
 
 # How to run
 
-If you download universe-release-bundled-XX.zip, extract the zip folder then run `startUniverse.bat`.
+If you download universe-release-bundled.zip, extract the zip folder then run `startUniverse.bat`.
 
 If you want to run the source version, make sure you have Colorama installed with `pip install colorama`.
-Then, extract the source zip, and run `python system.py` in that directory with Python 3 installed.
+Then, extract universe-release-source.zip, and run `python system.py` in that directory with Python 3 installed.
 
 # Making your own things
 
