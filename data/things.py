@@ -6,30 +6,82 @@ thingsDict = {
     "water": [("Hydrogen", 1, 1), ("Oxygen", 1, 1)],
     "galactic supercluster": [("galaxy", 20, 0.8)],
     "galaxy": [
-        ("yellow-star", 40, 0.8),
+        ("yellow-star", 10, 0.8),
+        ("dyson-star", 2, 0.08),
+        ("yellow-star", 30, 0.8),
         ("red-star", 12, 0.8),
         ("supermassive black hole", 1, 1),
     ],
-    "supermassive black hole": [("universe", 1, 1)],
+    "supermassive black hole": [
+        ("universe", 1, 1),
+        ("black-hole-orbit", 1, 0.4)
+    ],
+    "black-hole-orbit": [
+        "orbiting bodies",
+        ("yellow-star", 10, 0.7),
+        ("red-star", 10, 0.5)
+    ],
+    "dyson-star": [
+        "dyson sphered star (dim)",
+        ("dyson-star-orbit", 1, 0.99),
+        ("dyson sphere", 1, 1),
+        ("Hydrogen", 1, 1),
+        ("Helium", 1, 1),
+    ],
+    "dyson-sphere": [
+        ("wip", 1, 1)
+        #google this idk
+
+    ],
     "yellow-star": [
         "star (yellow)",
+        ("yellow-star-orbit", 1, 0.99),
+        ("Hydrogen", 1, 1),
+        ("Helium", 1, 1),
+    ],
+    "yellow-star-orbit":[
+        "orbiting bodies",
         ("medieval-wet-planet", 1, 0.4),
         ("modern-wet-planet", 1, 0.4),
         ("lifeless wet planet", 5, 0.5),
         ("rocky planet", 6, 0.6),
+        ("life-gas giant", 2, 0.1),
+        ("gas giant", 6, 0.6),
+        ("space station", 1, 0.05),
+    ],
+    "dyson-star-orbit":[
+        "orbiting bodies",
+        ("medieval-wet-planet", 1, 0.1),
+        ("modern-wet-planet", 1, 0.1),
+        ("advanced-wet-planet", 1, 1),
+        ("lifeless wet planet", 5, 0.5),
+        ("rocky planet", 6, 0.6),
+        ("life-gas giant", 2, 0.1),
         ("gas giant", 6, 0.6),
         ("space station", 1, 0.05),
     ],
     "red-star": [
         "star (red giant)",
+        ("red-star-orbit", 1, 0.999),
+        ("Hydrogen", 1, 1),
+        ("Helium", 1, 1),
+    ],
+    "red-star-orbit": [
+        "orbiting bodies",
         ("medieval-wet-planet", 1, 0.1),
+        ("modern-wet-planet", 1, 0.05),
         ("lifeless wet planet", 5, 0.6),
         ("rocky planet", 6, 0.7),
-        ("gas giant", 6, 0.6),
+        ("gas giant", 6, 0.6)
     ],
-    "gas giant": [("Hydrogen", 1, 1), ("Helium", 1, 1)],
-    "rocky planet": [("Iron", 1, 1), ("Silicon", 1, 1)],
+    "gas giant": [("moon", 24, 0.7),("gas-atmosphere", 1, 1),("Hydrogen", 1, 1), ("Helium", 1, 1)],
+    "life-gas giant": ["gas giant", ("life-gas-atmosphere", 1, 1),("moon", 24, 0.6),],
+    "life-gas-atmosphere": ["atmosphere", ("gas-atmosphere-life", 1, 1), ("Hydrogen", 1, 1), ("Helium", 1, 1)],
+    "gas-atmosphere-life": ["life", ("querblop", 5, 0.7), ("nag nag", 4, 0.1)],
+    "gas-atmosphere": [("Hydrogen", 1, 1), ("Helium", 1, 1)],
+    "rocky planet": [("moon", 0.7, 1),("Iron", 1, 1), ("Silicon", 1, 1)],
     "lifeless wet planet": [
+        ("moon", 0.8, 1),
         ("lifeless continent", 10, 0.6),
         ("ocean", 1, 1),
         ("sea", 12, 0.6),
@@ -38,6 +90,7 @@ thingsDict = {
     ],
     "medieval-wet-planet": [
         "wet planet with life",
+        ("moon", 0.8, 1),
         ("medieval-continent", 7, 0.9),
         ("continent", 3, 0.5),
         ("life-ocean", 1, 1),
@@ -293,6 +346,25 @@ thingsDict = {
         ("life-sea", 12, 0.6),
         ("arctic", 2, 0.5),
     ],
+    "advanced-wet-planet": [
+        "wet planet with life",
+        ("advanced-continent", 7, 0.9),
+        ("continent", 3, 0.5),
+        ("life-ocean", 1, 1),
+        ("life-sea", 12, 0.6),
+        ("arctic", 2, 0.5),
+    ],
+    "advanced-continent": ["continent", ("advanced-civilization", 1, 1), ("dirt", 1, 1)],
+    "advanced-civilization": ["civilization", ("advanced-nation", 20, 0.4)],
+    "advanced-nation": [
+        "advancedNationName"
+        # TODO: Made advanced nations/planets with dyson spheres n ships n stuff
+        #("advanced-capital", 1, 1),
+        #("advanced-city", 5, 0.4),
+        #("life-rural region", 3, 0.8),
+        #("desert region", 2, 0.4),
+    ],
+
     "modern-continent": ["continent", ("modern-civilization", 1, 1), ("dirt", 1, 1)],
     "modern-civilization": ["civilization", ("modern-nation", 20, 0.4)],
     "modern-nation": [
