@@ -3,15 +3,14 @@ Universe Observatory in Python 3 🌌
 
 Lets you model and explore the entire universe. Based on [Orteil's Nested](http://orteil.dashnet.org/nested).
 
-Work in progress, contributions and improvments welcome! :)
-
+Work in progress, contributions and improvements welcome! :)
 
 # How to run
 
-Make sure you have Colorama installed with `pip install colorama`
+If you download universe-release-bundled-XX.zip, extract the zip folder then run `startUniverse.bat`.
 
-Run the file `system.py` with Python 3.
-Do this by running `py system.py` in the directory you installed the files to.
+If you want to run the source version, make sure you have Colorama installed with `pip install colorama`.
+Then, extract the source zip, and run `python system.py` in that directory with Python 3 installed.
 
 # Making your own things
 
