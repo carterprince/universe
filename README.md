@@ -8,7 +8,10 @@ Work in progress, contributions and improvments welcome! :)
 
 # How to run
 
+Make sure you have Colorama installed with `pip install colorama`
+
 Run the file `system.py` with Python 3.
+Do this by running `py system.py` in the directory you installed the files to.
 
 # Making your own things
 
