@@ -12,6 +12,14 @@ If you download universe-release-bundled.zip, extract the zip folder then run `s
 If you want to run the source version, make sure you have Colorama installed with `pip install colorama`.
 Then, extract universe-release-source.zip, and run `python system.py` in that directory with Python 3 installed.
 
+# Setting the seed
+
+Run `system.py` with the `-s` or `--seed` option.
+
+Example: `python system.py -s SeedyMcSeedFace`
+
+Each seed generates the exact same, including nations' and individuals' names.
+
 # Making your own things
 
 The composition of everything is defined in `things.py` in the `data` folder.
