@@ -3,7 +3,7 @@ Universe Observatory in Python 3 🌌
 
 Lets you model and explore the entire universe. Based on [Orteil's Nested](http://orteil.dashnet.org/nested).
 
-Work in progress, contributions and improvements welcome! :)
+I want to rewrite this in a compiled language soon for easier releases. Stay tuned.
 
 # How to run
 
